@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quuu.VideoStoreManagementSystem.view.ModifyDeleteCustomerAccountPage">
+   <children>
+      <AnchorPane layoutX="153.0" layoutY="143.0" prefHeight="623.0" prefWidth="653.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="14.0" prefWidth="500.0" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="500.0">
+                     <children>
+                        <ImageView fitHeight="66.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="39.0" prefWidth="355.0" text="Update/Delete Customer Account">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="75.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon2.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label alignment="TOP_CENTER" prefHeight="19.0" prefWidth="498.0" text="-----------------------------------------------------" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Email">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="email" prefHeight="25.0" prefWidth="285.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Password:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="password" disable="true" prefHeight="25.0" prefWidth="285.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="First Name:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="fn" disable="true" prefHeight="25.0" prefWidth="285.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Last Name:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="ln" disable="true" prefHeight="25.0" prefWidth="285.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="135.0" text="Address:">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="address" disable="true" prefHeight="25.0" prefWidth="285.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="500.0">
+                     <children>
+                        <Label prefHeight="39.0" prefWidth="133.0" text="Province: ">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ChoiceBox fx:id="province" disable="true" prefHeight="26.0" prefWidth="90.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="prompt" alignment="CENTER" prefHeight="44.0" prefWidth="390.0" text="Admin should not be able to change Customer's email as it requires customer's verification" textFill="#f20909" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="retrieve" mnemonicParsing="false" onAction="#handleRetrieve" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Retrieve by email" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="update" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="30.0" prefWidth="179.0" style="-fx-background-color: DARKSEAGREEN; -fx-border-radius: 5px;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="delete" mnemonicParsing="false" onAction="#handleDelete" prefHeight="30.0" prefWidth="177.0" style="-fx-background-color: DARKSALMON; -fx-border-radius: 5px;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#handleBack" prefHeight="31.0" prefWidth="179.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5px;" text="Back" textFill="#616161">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
